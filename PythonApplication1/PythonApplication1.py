@@ -1,6 +1,4 @@
-
 import os
-
 class Item:
     def __init__(self, name, category, price, featured):
         self.name = name
@@ -61,7 +59,7 @@ class AuctionPortal:
         print('Wybierz przedmiot, ktory chcesz kupic: ')
         print()
         for i, item in enumerate(self.items_list, start=1):
-            item.name = f'{i}. {item.name} | {item.category} | {item.price}'
+            item.name = (f'{i}. {item.name} | {item.category} | {item.price}zl')
             print(item.name)
         choice = int(input())
         if choice > 0 and choice <= len(self.items_list):
@@ -96,7 +94,6 @@ while True:
     print('1 --> Zakup')
     print('2 --> Sprzedaz')
     print('3 --> Koniec')
-    print('4 --> Lista')
     option = input()
 
     if option == '1':
@@ -105,20 +102,5 @@ while True:
         portal.add_item()
     elif option == '3':
         break
-    elif option == '4':
-            index = 1
-            c_index = 1
-            print()
-            print('Lista przedmiotow: ')
-            print()
-            for item in portal.items_list:
-                print(f"{index}.",item.name,'|',  item.category,'|', item.price, '|', item.featured )
-                index += 1
-            print()
-            print('Lista kart: ')
-            print()
-            for item in portal.credit_cards:
-                print(f'{c_index}', item.number, '|', item.name, '|', item.limit)
-                c_index += 1
     else:
         print('Nieporawidla akcja.')
