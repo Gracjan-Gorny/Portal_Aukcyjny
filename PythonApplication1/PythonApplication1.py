@@ -16,7 +16,6 @@ class AuctionPortal:
     def __init__(self,):
         self.items_list = [
             Item('iPhone 12 Pro', 'elektronika', 4600, True),
-            Item('Arbuz', 'jedzenie', 32, False),
             Item('Konsola Playstation 5', 'elektronika', 2899, True),
             Item('Spodnie Wrangler Arizona', 'odziez', 189, False),
             Item('Basen ogrodowy Premium', 'dom i ogrod', 1199, False),
